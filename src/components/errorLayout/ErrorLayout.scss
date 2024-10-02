@@ -1,0 +1,12 @@
+@use "../../common//styles/variables.scss";
+@use "../../common//styles/mixins.scss";
+
+.error-layout {
+  background-color: #0d1c4c;
+  height: 50vh;
+  margin-bottom: -460px;
+
+  @include mixins.MediaQueries(small-576px) {
+    height: 40vh;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../common/styles/mixins.scss";
+@use "../../common/styles/variables.scss";
+
+.cart-account-flags {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  @include mixins.MediaQueries(extraLarge-1200px) {
+    column-gap: 12.5px;
+  }
+  @include mixins.MediaQueries(large-960px) {
+    position: absolute;
+    left: -200%;
+    transform: translateX(-50%);
+    bottom: -240px;
+    z-index: 101;
+    transition: all 0.3s;
+  }
+
+  .cart-icon {
+    cursor: pointer;
+  }
+
+  .flag-dropdown {
+    position: relative;
+
+    .selected-flag {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .not-selected-flag {
+      position: absolute;
+      display: none;
+      align-items: center;
+      gap: 5px;
+      background-color: #182754;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      left: 50%;
+      top: 39px;
+      transform: translateX(-50%);
+
+      &:hover {
+        background-color: #1e3167;
+      }
+    }
+
+    .not-selected-flag.active {
+      display: flex;
+    }
+  }
+}
+.cart-account-flags.active {
+  @include mixins.MediaQueries(large-960px) {
+    left: 50%;
+  }
+}

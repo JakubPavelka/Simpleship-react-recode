@@ -10,7 +10,7 @@ const initializei18n = () => {
     .use(initReactI18next)
     .init({
       fallbackLng: "en",
-      debug: true, // False do produkce
+      debug: true,
       interpolation: {
         escapeValue: false,
       },

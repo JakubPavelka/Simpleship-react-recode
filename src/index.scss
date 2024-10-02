@@ -1,11 +1,11 @@
-@import "./common/styles/variables";
-@import "./common/styles/mixins";
+@use "./common/styles/variables";
+@use "./common/styles/mixins";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 html {
   font-family: "Poppins", sans-serif;
-  color: $color-primary;
+  color: variables.$color-primary;
 }
 
 * {

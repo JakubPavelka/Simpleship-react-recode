@@ -1,0 +1,56 @@
+@use "../common/styles/mixins.scss";
+@use "../common/styles/variables.scss";
+
+.error-page {
+  position: absolute;
+  background-color: variables.$white;
+  max-width: 1700px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 130px 65px;
+  text-align: center;
+  box-shadow: 0 4px 65px 0 rgba(14, 28, 76, 0.14);
+
+  @include mixins.MediaQueries(extraLarge2-1550px) {
+    top: 45%;
+  }
+  @include mixins.MediaQueries(large-960px) {
+    padding: 120px 35px;
+  }
+  @include mixins.MediaQueries(medium-767px) {
+    padding: 80px 35px;
+  }
+  @include mixins.MediaQueries(small-576px) {
+    padding: 48px 20px;
+  }
+  @media (max-width: 400px) {
+    padding: 28px;
+  }
+
+  h2 {
+    @include mixins.MediaQueries(small-576px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .error-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 24px;
+    button {
+      font-family: "Poppins", sans-serif;
+      border-radius: 12px;
+      border: none;
+      padding: 12px 24px;
+      cursor: pointer;
+      background-color: variables.$color-primary;
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}

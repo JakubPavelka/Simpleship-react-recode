@@ -1,0 +1,44 @@
+@use "../../common/styles/variables";
+@use "../../common/styles/mixins";
+
+header {
+  background-color: variables.$color-primary;
+  height: 630px;
+  margin-bottom: -460px;
+
+  .under-nav {
+    p {
+      text-align: left;
+      font-size: variables.$font-headings;
+      line-height: 37px;
+      color: variables.$white;
+      margin-top: 64px;
+
+      @include mixins.MediaQueries(large-960px) {
+        margin-top: 54px;
+      }
+
+      @include mixins.MediaQueries(medium-767px) {
+        margin-top: 45px;
+        text-align: center;
+      }
+
+      span {
+        position: relative;
+        z-index: 4;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 10px;
+          border-radius: 2px;
+          background-color: variables.$span-bg;
+          bottom: 5px;
+          left: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
