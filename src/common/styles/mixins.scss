@@ -22,3 +22,22 @@
     }
   }
 }
+
+// INPUTS
+@mixin form-input {
+  padding-block: 15px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  border: 1px solid #989898;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+@mixin form-input-w-img {
+  padding-block: 15px;
+  padding-right: 20px;
+  padding-left: 50px;
+  border-radius: 10px;
+  border: 1px solid #989898;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}

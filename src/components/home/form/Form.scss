@@ -1,0 +1,21 @@
+@use "../../../common/styles/variables.scss";
+@use "../../../common/styles/mixins.scss";
+
+.shadow-form {
+  position: relative;
+  max-width: 1700px;
+  background-color: variables.$white;
+  margin-inline: auto;
+  margin-top: 50px;
+  padding-block: 65px;
+  border-radius: 30px;
+  box-shadow: 0 4px 65px 0 rgba(14, 28, 76, 0.14);
+  @media (max-width: 920px) {
+    box-shadow: none;
+    padding-block: 45px;
+  }
+
+  @include mixins.MediaQueries(medium-767px) {
+    padding-block: 35px;
+  }
+}
